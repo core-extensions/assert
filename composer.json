@@ -3,12 +3,6 @@
     "description": "Extended assertion library",
     "type": "library",
     "license": "private",
-    "authors": [
-        {
-            "name": "Ramil Gallyamov",
-            "email": "gallyamow@gmail.com"
-        }
-    ],
     "require": {
         "php": "^7.3",
         "webmozart/assert": "^1.6"
