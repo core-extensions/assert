@@ -1,0 +1,43 @@
+{
+    "name": "core-extensions/assert",
+    "description": "Extended assertion library",
+    "type": "library",
+    "license": "private",
+    "authors": [
+        {
+            "name": "Ramil Gallyamov",
+            "email": "gallyamow@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "webmozart/assert": "^1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "vimeo/psalm": "^3.8",
+        "psalm/plugin-phpunit": "^0.8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoreExtensions\\Assert\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CoreExtensions\\Assert\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "cs": "php-cs-fixer fix -v --dry-run --ansi",
+        "cs-fix": "php-cs-fixer fix -v --diff --ansi",
+        "unit": "phpunit --colors=always",
+        "psalm": "psalm --diff --diff-methods --show-info=false",
+        "test": [
+            "@unit",
+            "@psalm",
+            "@cs"
+        ]
+    }
+}
